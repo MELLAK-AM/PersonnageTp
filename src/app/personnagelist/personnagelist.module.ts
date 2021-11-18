@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PersonnagePageComponent } from './pages/personnage-page/personnage-page.component';
 import { DisplayPersonnageComponent } from './components/display-personnage/display-personnage.component';
 import { AddPersonnageComponent } from './layouts/add-personnage/add-personnage.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -13,8 +14,10 @@ import { AddPersonnageComponent } from './layouts/add-personnage/add-personnage.
     AddPersonnageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
+  providers: [],
   exports: [
     PersonnagePageComponent
   ]

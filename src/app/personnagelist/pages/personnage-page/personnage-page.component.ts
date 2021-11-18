@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Personnage } from '../../model/Personnage';
+import { PersonnageService } from '../../service/personnage.service';
+
+
+
 
 @Component({
   selector: '<app-personnage-page>',
@@ -7,20 +11,55 @@ import { Personnage } from '../../model/Personnage';
   styleUrls: ['./personnage-page.component.css']
 })
 export class PersonnagePageComponent implements OnInit {
-  personnages: Array<Personnage> = [{title: "perso1", id:1, key:"ysy", name:"toto", active: false}, {title: "perso2", id:2, key:"ysyz", name:"titi", active: false}]
+  personnages: Array<Personnage>=[];
+  
 
-  constructor() { }
+  constructor(private personnageService: PersonnageService) { }
+
+  //Affichage des personnages 
 
   ngOnInit(): void {
+    this.personnageService.getPersonnage();
+   
   }
 
-  delete =(data: number) => {
-    this.personnages.splice(data, 1)
+  ngOnDestroy(): void {
+    
   }
 
-  addPersonnage = (personnage: string): void =>{
-    //this.personnages.push({personnage: personnage, active:false})
-    console.log(personnage);
+  getPersonnages = ():void => {
+    this.personnageService.personnageStream.subscribe(
+      data => {
+        this.personnages = data
+    },
+    err=> console.log(err))
   }
+// Nouveau Personnage
+
+   addPersonnage = (personnage: string): void => {
+     
+   }
+
+
+
+  //Delete un personnage
+  delete =(data: number): void => {
+    this.personnageService.deletePersonnage(data).subscribe(data=>{
+      this.getPersonnages()
+    },
+    err =>console.error(err))
+  }
+
+  //layout pour créer un nouveau personnage
+  
+  update = (personnage: Personnage): void => {
+this.personnageService.changePersonnage(personnage).subscribe(data=>{
+  this.getPersonnages()
+})
+  }
+
+
+
+ 
 
 }

@@ -10,6 +10,7 @@ export class DisplayPersonnageComponent implements OnInit {
 
   @Input() data: Personnage[] = [];
   @Output() deletePersonnage: EventEmitter<number> = new EventEmitter<number>();
+  @Output() updatePersonnage: EventEmitter<Personnage> = new EventEmitter<Personnage>();
   titre: string ="LEAGUE OF LEGENDS"
   constructor() { }
 
@@ -19,5 +20,10 @@ export class DisplayPersonnageComponent implements OnInit {
 
   delete = (data: number) => {
   this.deletePersonnage.emit(data);
+  }
+
+  changePersonnage =(personnage: Personnage) => {
+    personnage.active == false ? personnage.active = true : personnage.active = false;
+    this.updatePersonnage.emit(personnage)
   }
 }
