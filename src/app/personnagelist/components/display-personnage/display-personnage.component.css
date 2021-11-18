@@ -1,0 +1,22 @@
+.pos{
+    display: block;
+     height: 10vh;
+     width:50vh;
+     background-color: rgb(100, 220, 250);
+     overflow: hidden;
+     text-align: center;
+ }
+ 
+ .flex{
+     display:flex;
+ }
+ 
+ .justify-content{
+     justify-content: space-evenly;
+ }
+
+ .title{
+     text-align: center;
+     background-color: rgb(118, 127, 129);
+     height: 25px;
+ }
