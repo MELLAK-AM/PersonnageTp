@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Personnage } from '../../model/Personnage';
 
 @Component({
@@ -9,10 +9,15 @@ import { Personnage } from '../../model/Personnage';
 export class DisplayPersonnageComponent implements OnInit {
 
   @Input() data: Personnage[] = [];
+  @Output() deletePersonnage: EventEmitter<number> = new EventEmitter<number>();
   titre: string ="LEAGUE OF LEGENDS"
   constructor() { }
 
   ngOnInit(): void {
   }
 
+
+  delete = (data: number) => {
+  this.deletePersonnage.emit(data);
+  }
 }

@@ -1,12 +1,12 @@
 
 <p class="title">{{titre}}</p>
 <ul class="flex justify-content">
-    <div *ngFor="let personnage of data">
+    <div *ngFor="let personnage of data; let i = index">
         <span class="pos"> personnage : {{personnage.title}} </span>
-        <span class="pos"> personnage : {{personnage.id}} </span>
         <span class="pos"> personnage : {{personnage.key}} </span>
         <span class="pos"> personnage : {{personnage.name}} </span>
         <span class="pos"> personnage : {{personnage.active}} </span>
+        <button class="pos" (click)="delete(i)"> X </button>
     </div>
 
 </ul>

@@ -14,4 +14,13 @@ export class PersonnagePageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  delete =(data: number) => {
+    this.personnages.splice(data, 1)
+  }
+
+  addPersonnage = (personnage: string): void =>{
+    //this.personnages.push({personnage: personnage, active:false})
+    console.log(personnage);
+  }
+
 }
