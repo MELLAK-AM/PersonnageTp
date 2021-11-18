@@ -20,6 +20,7 @@ export class PersonnagePageComponent implements OnInit {
 
   ngOnInit(): void {
     this.personnageService.getPersonnage();
+    this.getPersonnages();
    
   }
 
@@ -34,18 +35,18 @@ export class PersonnagePageComponent implements OnInit {
     },
     err=> console.log(err))
   }
-// Nouveau Personnage
-
-   addPersonnage = (personnage: string): void => {
-     
-   }
 
 
+getAll = ():void =>{
+  this.personnageService.personnageStream.subscribe(data =>{
+    this.personnages = data
+  }, err=> console.error(err))
+}
 
   //Delete un personnage
   delete =(data: number): void => {
     this.personnageService.deletePersonnage(data).subscribe(data=>{
-      this.getPersonnages()
+      this.personnageService.getPersonnage()
     },
     err =>console.error(err))
   }
@@ -54,11 +55,15 @@ export class PersonnagePageComponent implements OnInit {
   
   update = (personnage: Personnage): void => {
 this.personnageService.changePersonnage(personnage).subscribe(data=>{
-  this.getPersonnages()
+  this.personnageService.getPersonnage()
 })
   }
 
+// Nouveau Personnage
 
+addPersonnage = (personnage: string): void => {
+     
+}
 
  
 
