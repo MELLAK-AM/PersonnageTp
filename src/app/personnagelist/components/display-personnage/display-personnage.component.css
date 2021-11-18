@@ -1,22 +1,26 @@
+
 .pos{
-    display: block;
-     height: 10vh;
-     width:50vh;
+    display: flex;
+     height: 5vh;
+     width:20vh;
      background-color: rgb(100, 220, 250);
      overflow: hidden;
      text-align: center;
+     
  }
  
  .flex{
-     display:flex;
+     display: flex;
  }
  
  .justify-content{
-     justify-content: space-evenly;
+     justify-content:first baselines;
  }
 
  .title{
      text-align: center;
-     background-color: rgb(118, 127, 129);
-     height: 25px;
+     background-color: rgb(139, 142, 145);
+     height: 50px;
+     font-size: 35px;
+     text-decoration: center;
  }

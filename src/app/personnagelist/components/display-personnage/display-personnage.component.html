@@ -3,12 +3,12 @@
 <ul class="flex justify-content">
     <div *ngFor="let personnage of data; let i = index">
         <input class="pos" type="checkbox" [checked]="personnage.active" (click)="changePersonnage(personnage)">
-        <span class="pos"> personnage : {{personnage.title}} </span>
-        {{personnage.id}}
-        <span class="pos"> personnage : {{personnage.key}} </span>
-        <span class="pos"> personnage : {{personnage.name}} </span>
-        <span class="pos"> personnage : {{personnage.active}} </span>
-        <button class="pos" (click)="delete(personnage.id)"> delete </button>
+        <h3 class="pos"> {{personnage.title}} </h3>
+        <span class="pos">Numero:{{personnage.id}} </span>
+        <span class="pos">  {{personnage.key}} </span>
+        <span class="pos">  {{personnage.name}} </span>
+        <span class="pos">  {{personnage.active}} </span>
+        <button type="button" class="pos" (click)="delete(personnage.id)"> delete </button>
     </div>
 
 </ul>

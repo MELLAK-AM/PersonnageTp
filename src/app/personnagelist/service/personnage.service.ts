@@ -14,7 +14,7 @@ export class PersonnageService {
   constructor(private http: HttpClient){}
 
   getPersonnage = ():void =>{
-this.http.get<Personnage[]>(`${environment.URL}`).subscribe(data =>{
+this.http.get<Personnage[]>(environment.URL).subscribe(data =>{
   this.personnageStream.next(data)
 })
   }

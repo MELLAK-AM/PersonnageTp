@@ -62,7 +62,11 @@ this.personnageService.changePersonnage(personnage).subscribe(data=>{
 // Nouveau Personnage
 
 addPersonnage = (personnage: string): void => {
-     
+    //  let obj = {personnage: personnage, active: false}
+
+    //  this.personnageService.addPersonnage(obj).subscribe(data=> {
+    //    this.personnageService.getPersonnage()
+    //  }, err=> console.error(err))
 }
 
  

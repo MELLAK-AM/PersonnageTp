@@ -1,48 +1,6 @@
 {
   "Personnage": [
     {
-      "title": "the Monkey King",
-      "id": 62,
-      "key": "MonkeyKing",
-      "name": "Wukong",
-      "active": true
-    },
-    {
-      "title": "Grandmaster at Arms",
-      "id": 24,
-      "key": "Jax",
-      "name": "Jax",
-      "active": true
-    },
-    {
-      "title": "the Harbinger of Doom",
-      "id": 9,
-      "key": "Fiddlesticks",
-      "name": "Fiddlesticks",
-      "active": true
-    },
-    {
-      "title": "the Demon Jester",
-      "id": 35,
-      "key": "Shaco",
-      "name": "Shaco",
-      "active": true
-    },
-    {
-      "title": "the Uncaged Wrath of Zaun",
-      "id": 19,
-      "key": "Warwick",
-      "name": "Warwick",
-      "active": true
-    },
-    {
-      "title": "the Rebel",
-      "id": 498,
-      "key": "Xayah",
-      "name": "Xayah",
-      "active": true
-    },
-    {
       "title": "the Bestial Huntress",
       "id": 76,
       "key": "Nidalee",
@@ -75,28 +33,21 @@
       "id": 33,
       "key": "Rammus",
       "name": "Rammus",
-      "active": true
+      "active": false
     },
     {
       "title": "the Kraken Priestess",
       "id": 420,
       "key": "Illaoi",
       "name": "Illaoi",
-      "active": true
-    },
-    {
-      "title": "the Daring Bombardier",
-      "id": 42,
-      "key": "Corki",
-      "name": "Corki",
-      "active": true
+      "active": false
     },
     {
       "title": "the Heart of the Freljord",
       "id": 201,
       "key": "Braum",
       "name": "Braum",
-      "active": true
+      "active": false
     },
     {
       "title": "the Hand of Noxus",
@@ -117,7 +68,7 @@
       "id": 21,
       "key": "MissFortune",
       "name": "Miss Fortune",
-      "active": true
+      "active": false
     },
     {
       "title": "Shepherd of Souls",
@@ -425,7 +376,7 @@
       "id": 51,
       "key": "Caitlyn",
       "name": "Caitlyn",
-      "active": false
+      "active": true
     },
     {
       "title": "Fury of the North",
