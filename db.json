@@ -1,13 +1,6 @@
 {
   "Personnage": [
     {
-      "title": "the Bestial Huntress",
-      "id": 76,
-      "key": "Nidalee",
-      "name": "Nidalee",
-      "active": true
-    },
-    {
       "title": "Rise of the Thorns",
       "id": 143,
       "key": "Zyra",
